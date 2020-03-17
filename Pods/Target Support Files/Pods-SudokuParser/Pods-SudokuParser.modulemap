@@ -1,0 +1,6 @@
+framework module Pods_SudokuParser {
+  umbrella header "Pods-SudokuParser-umbrella.h"
+
+  export *
+  module * { export * }
+}

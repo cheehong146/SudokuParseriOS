@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DA8EC9BA890632B24124CF8 /* Pods_SudokuParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF439C842367994862068FA /* Pods_SudokuParser.framework */; };
+		D569A6A0241F77E000A8D9B3 /* numbers.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D569A69F241F77E000A8D9B3 /* numbers.mlmodel */; };
 		D579103F241F0746000129CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579103E241F0746000129CC /* AppDelegate.swift */; };
 		D5791041241F0746000129CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5791040241F0746000129CC /* SceneDelegate.swift */; };
 		D5791043241F0746000129CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5791042241F0746000129CC /* ViewController.swift */; };
 		D5791046241F0746000129CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5791044241F0746000129CC /* Main.storyboard */; };
 		D5791048241F0748000129CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5791047241F0748000129CC /* Assets.xcassets */; };
 		D579104B241F0748000129CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5791049241F0748000129CC /* LaunchScreen.storyboard */; };
+		D5D14A702420B1ED009A6AC1 /* MNIST.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D5D14A6F2420B1ED009A6AC1 /* MNIST.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF20FBD017F9A9ED184511BA /* Pods-SudokuParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SudokuParser.release.xcconfig"; path = "Target Support Files/Pods-SudokuParser/Pods-SudokuParser.release.xcconfig"; sourceTree = "<group>"; };
+		CBF439C842367994862068FA /* Pods_SudokuParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SudokuParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D569A69F241F77E000A8D9B3 /* numbers.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = numbers.mlmodel; sourceTree = "<group>"; };
 		D579103B241F0746000129CC /* SudokuParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudokuParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D579103E241F0746000129CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5791040241F0746000129CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		D5791047241F0748000129CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D579104A241F0748000129CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D579104C241F0748000129CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5D14A6F2420B1ED009A6AC1 /* MNIST.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MNIST.mlmodel; sourceTree = "<group>"; };
+		F0850199849DBD84843D4451 /* Pods-SudokuParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SudokuParser.debug.xcconfig"; path = "Target Support Files/Pods-SudokuParser/Pods-SudokuParser.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA8EC9BA890632B24124CF8 /* Pods_SudokuParser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BA97A18B92F6292EB04647C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0850199849DBD84843D4451 /* Pods-SudokuParser.debug.xcconfig */,
+				BF20FBD017F9A9ED184511BA /* Pods-SudokuParser.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4D1D0CE49C09222C538E5A5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBF439C842367994862068FA /* Pods_SudokuParser.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D5791032241F0746000129CC = {
 			isa = PBXGroup;
 			children = (
 				D579103D241F0746000129CC /* SudokuParser */,
 				D579103C241F0746000129CC /* Products */,
+				3BA97A18B92F6292EB04647C /* Pods */,
+				4D1D0CE49C09222C538E5A5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				D579103E241F0746000129CC /* AppDelegate.swift */,
+				D569A69F241F77E000A8D9B3 /* numbers.mlmodel */,
 				D5791040241F0746000129CC /* SceneDelegate.swift */,
+				D5D14A6F2420B1ED009A6AC1 /* MNIST.mlmodel */,
 				D5791042241F0746000129CC /* ViewController.swift */,
 				D5791044241F0746000129CC /* Main.storyboard */,
 				D5791047241F0748000129CC /* Assets.xcassets */,
@@ -74,6 +104,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D579104F241F0748000129CC /* Build configuration list for PBXNativeTarget "SudokuParser" */;
 			buildPhases = (
+				ECF2601E022619CF738C0EB2 /* [CP] Check Pods Manifest.lock */,
 				D5791037241F0746000129CC /* Sources */,
 				D5791038241F0746000129CC /* Frameworks */,
 				D5791039241F0746000129CC /* Resources */,
@@ -133,6 +164,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ECF2601E022619CF738C0EB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SudokuParser-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D5791037241F0746000129CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +197,8 @@
 				D5791043241F0746000129CC /* ViewController.swift in Sources */,
 				D579103F241F0746000129CC /* AppDelegate.swift in Sources */,
 				D5791041241F0746000129CC /* SceneDelegate.swift in Sources */,
+				D5D14A702420B1ED009A6AC1 /* MNIST.mlmodel in Sources */,
+				D569A6A0241F77E000A8D9B3 /* numbers.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,10 +340,11 @@
 		};
 		D5791050241F0748000129CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0850199849DBD84843D4451 /* Pods-SudokuParser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 594W4GD688;
+				DEVELOPMENT_TEAM = ZC63U9U93Y;
 				INFOPLIST_FILE = SudokuParser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,10 +359,11 @@
 		};
 		D5791051241F0748000129CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF20FBD017F9A9ED184511BA /* Pods-SudokuParser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 594W4GD688;
+				DEVELOPMENT_TEAM = ZC63U9U93Y;
 				INFOPLIST_FILE = SudokuParser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
