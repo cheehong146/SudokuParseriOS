@@ -106,11 +106,12 @@ class SudokuAnalyzeVC: UIViewController {
         guard let cgImage = image.cgImage else { return }
         
         let cropSize = CGSize(width: boundingBox.width * image.size.width, height: boundingBox.height * image.size.height)
-        let cropOrigin = CGPoint(x: topLeft.x * image.size.width, y: ((1 - topLeft.y) * image.size.height) - cropSize.height)
+        let cropOrigin = CGPoint(x: topLeft.x * image.size.width, y: image.size.height - (topLeft.y * image.size.height))
         let cropRect = CGRect(origin: cropOrigin, size: cropSize)
         guard let croppedCgImage = cgImage.cropping(to: cropRect) else { return }
         let croppedImage = UIImage(cgImage: croppedCgImage)
         
+        print(cropRect)
         if cropRect.size.width > UIScreen.main.nativeBounds.width * 0.9 {
             //main box
             sudoku.mainImage = croppedImage
